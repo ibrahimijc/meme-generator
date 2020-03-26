@@ -31,14 +31,13 @@ class MemeGenerator extends Component{
 
 
     componentDidMount(){
-        console.log(process.env.REACT_APP_USERNMAE);
-        console.log(process.env.NODE_ENV);
+       
         
         axios.get("https://api.imgflip.com/get_memes")
         .then(response =>{
-            console.log("res",response);
+           
             const {memes} = response.data.data;
-            console.log("memes",memes);
+           
             this.setState({allMemes:memes})
         })
 
@@ -48,7 +47,6 @@ class MemeGenerator extends Component{
 
     updateId(value){
         const img =value;
-        console.log("image",img);
         const meme =  this.state.allMemes.find(meme => meme.url===img)
         
         this.setState(prevState => {
@@ -60,7 +58,6 @@ class MemeGenerator extends Component{
     handleChange(event){
 
         const {name,value,type} = event.target;
-        console.log(event.target);
         
         this.setState({[name]:value});
        
@@ -84,7 +81,6 @@ class MemeGenerator extends Component{
     handleSubmit(){
         
         this.setState({dispayH2:false});
-        console.log(`data ${process.env.REACT_APP_USERNAME}  pass ${process.env.REACT_APP_PASSWORD} `)
         let data = { 
             username:process.env.REACT_APP_USERNAME,
             password:process.env.REACT_APP_PASSWORD,
@@ -96,7 +92,6 @@ class MemeGenerator extends Component{
 
          axios.post("https://api.imgflip.com/caption_image", this.encodeForm(data), {headers: {'Accept': 'application/json'}})
         .then(response=>{
-            console.log("res ",response);
             this.setState({randimg:response.data.data.url})
            
         }).catch(error=> {
