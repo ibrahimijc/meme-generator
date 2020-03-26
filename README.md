@@ -1,5 +1,19 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+
+## About This Project
+This project fetches memes from imgflip. One can select from different memes or generate memes on Random
+Then you can have the text captioned on the Image through the api
+
+
+
+## Before running setup .env
+Make an Account on https://api.imgflip.com/. Signup to get Username and password.
+Make .env file with
+REACT_APP_USERNAME=yourusername
+REACT_APP_PASSWORD=yourpassword
+
+
 ## Available Scripts
 
 In the project directory, you can run:
