@@ -8,7 +8,7 @@ class MemeGenerator extends Component {
     this.state = {
       toptext: "",
       bottomtext: "",
-      randimg: "https://i.imgflip.com/1bij.jpg",
+      randimg: "http://i.imgflip.com/1bij.jpg",
       t_id: 61579,
       dispayH2: true,
       allMemes: [],
@@ -90,9 +90,10 @@ class MemeGenerator extends Component {
       });
   }
   render() {
+      console.log(allMemes)
     const memeSelect = this.state.allMemes.map((meme) => {
       return (
-        <option memeid={meme.id} key={meme.id} value={meme.url}>
+        <option memeid={meme.id} value={meme.url}>
           {meme.name}
         </option>
       );

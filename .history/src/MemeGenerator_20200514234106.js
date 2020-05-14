@@ -90,9 +90,10 @@ class MemeGenerator extends Component {
       });
   }
   render() {
+      console.log(this.state.allMemes);
     const memeSelect = this.state.allMemes.map((meme) => {
       return (
-        <option memeid={meme.id} key={meme.id} value={meme.url}>
+        <option memeid={meme.id} value={meme.url}>
           {meme.name}
         </option>
       );

@@ -8,7 +8,7 @@ body {
 }
 
 header {
-    height: 40px;
+    height: 100px;
     display: flex;
     align-items: center;
     background: #6441A5;  /* fallback for old browsers */
@@ -17,9 +17,8 @@ header {
 }
 
 header > img {
-    height: 60%;
-    margin-left: 2%;
-    margin-right: 20%;
+    height: 40%;
+    margin-left: 10%;
 }
 
 header > p {
